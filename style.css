@@ -1,0 +1,1078 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  max-width: 1170px;
+  margin: 50px auto;
+}
+
+.section-1 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 250px 250px;
+  gap: 18px;
+  grid-template-areas: " modern book" " modern sofa";
+}
+@media screen and (max-width: 1024px) {
+  .section-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 300px);
+    gap: 18px;
+    grid-template-areas: "modern" "book" "sofa";
+  }
+}
+
+.modern {
+  grid-area: modern;
+  padding: 50px 30px;
+  width: 100%;
+  background-image: url(./images/Mask\ Group.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.modern__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #555555;
+}
+@media screen and (max-width: 480px) {
+  .modern__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.modern__price {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #7AC751;
+  margin: 10px 0;
+}
+@media screen and (max-width: 480px) {
+  .modern__price {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.modern__link {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .modern__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.book {
+  grid-area: book;
+  width: 100%;
+  padding: 50px 30px;
+  background-image: url(./images/Rectangle\ 33.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.book__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #555555;
+}
+@media screen and (max-width: 480px) {
+  .book__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.book__price {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #7AC751;
+  margin: 10px 0;
+}
+@media screen and (max-width: 480px) {
+  .book__price {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.book__link {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .book__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.sofa {
+  grid-area: sofa;
+  padding: 50px 30px;
+  width: 100%;
+  background-image: url(./images/Rectangle\ 34.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sofa__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #555555;
+}
+@media screen and (max-width: 480px) {
+  .sofa__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.sofa__price {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #7AC751;
+  margin: 10px 0;
+}
+@media screen and (max-width: 480px) {
+  .sofa__price {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.sofa__link {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .sofa__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 120px auto;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    margin: 60px auto;
+  }
+}
+.title__h2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #555555;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  .title__h2 {
+    font-size: 26px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title__h2 {
+    margin-bottom: 10px;
+  }
+}
+.title__h2__links {
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 35px;
+}
+@media screen and (max-width: 480px) {
+  .title__h2__links {
+    flex-direction: column;
+    margin: 20px;
+  }
+}
+.title__h2__links__item {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #757575;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .title__h2__links__item {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title__h2__links__item {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+.title__h2__links__item:hover {
+  color: #7AC751;
+}
+
+.section-2 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: minmax(390px, auto);
+  gap: 30px;
+  width: 100%;
+}
+.section-2__item-1 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/1.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-1__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-1__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-1__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-1__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-1__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-1__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-2 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/2.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-2__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-2__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-2__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-2__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-2__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-2__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-3 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/3.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-3__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-3__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-3__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-3__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-3__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-3__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-4 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/4.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-4__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-4__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-4__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-4__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-4__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-4__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-5 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/5.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-5__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-5__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-5__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-5__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-5__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-5__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-6 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/6.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-6__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-6__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-6__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-6__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-6__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-6__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-7 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/7.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-7__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-7__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-7__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-7__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-7__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-7__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+.section-2__item-8 {
+  position: relative;
+  width: 100%;
+  background-image: url(./images/8.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.section-2__item-8__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 390px;
+}
+.section-2__item-8__text__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  text-transform: uppercase;
+  color: rgba(117, 117, 117, 0.71);
+}
+.section-2__item-8__text__item-2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #555555;
+  margin: 4px 0 13px 0;
+}
+.section-2__item-8__price {
+  display: flex;
+  justify-content: space-between;
+}
+.section-2__item-8__price__item-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+  margin-right: 10px;
+}
+.section-2__item-8__price__item-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #CCCCCC;
+}
+
+.section__3 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 30px;
+  grid-template-areas: "item-1 item-2";
+}
+@media screen and (max-width: 1024px) {
+  .section__3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    grid-template-areas: "item-1" "item-2";
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 420px 420px;
+    gap: 30px;
+    grid-template-areas: "item-1" "item-2";
+  }
+}
+.section__3__item-1 {
+  width: 100%;
+  height: 250px;
+  grid-area: item-1;
+  position: relative;
+  background-image: url(./images/Offer-1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section__3__item-1__text {
+  width: 42%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .section__3__item-1__text {
+    width: 35%;
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-1__text {
+    width: 50%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__3__item-1__text {
+    width: 100%;
+    padding-top: 340px;
+  }
+}
+.section__3__item-1__text__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #555555;
+}
+.section__3__item-1__text__disc {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #757575;
+}
+@media screen and (max-width: 1024px) {
+  .section__3__item-1__text__disc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.section__3__item-1__text__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__3__item-1__text__items__price {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+}
+.section__3__item-1__text__items__price__line {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  text-decoration: line-through;
+  color: #CCCCCC;
+}
+.section__3__item-1__text__items__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7AC751;
+  width: 91px;
+  height: 26px;
+}
+.section__3__item-1__text__items__link__shop-now {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.section__3__item-2 {
+  width: 100%;
+  height: 250px;
+  grid-area: item-2;
+  position: relative;
+  background-image: url(./images/sec-3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section__3__item-2__text {
+  width: 42%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .section__3__item-2__text {
+    width: 35%;
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-2__text {
+    width: 50%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__3__item-2__text {
+    width: 100%;
+    padding-top: 340px;
+  }
+}
+.section__3__item-2__text__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #555555;
+}
+.section__3__item-2__text__disc {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #757575;
+}
+@media screen and (max-width: 1024px) {
+  .section__3__item-2__text__disc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.section__3__item-2__text__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__3__item-2__text__items__price {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #7AC751;
+}
+.section__3__item-2__text__items__price__line {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  text-decoration: line-through;
+  color: #CCCCCC;
+}
+.section__3__item-2__text__items__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7AC751;
+  width: 91px;
+  height: 26px;
+}
+.section__3__item-2__text__items__link__shop-now {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.discount {
+  width: 64px;
+  height: 23px;
+  background: #00B7F1;
+  border-radius: 0px 0px 0px 5px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  color: #FFFFFF;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+}
+
+.discount__new {
+  width: 44px;
+  height: 20px;
+  background-color: #00B7F1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0px 0px 5px 0px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  color: #FFFFFF;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount__sale {
+  width: 44px;
+  height: 20px;
+  background-color: #7AC751;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0px 0px 5px 0px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.008em;
+  color: #FFFFFF;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

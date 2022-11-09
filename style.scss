@@ -1,0 +1,634 @@
+@font-face {
+    font-family: "Mulish";
+    src: url("./fonts/Mulish-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url("./fonts/Mulish-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url("./fonts/Mulish-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("./fonts/Rubik-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+$main-font-family: "Mulish";
+
+$desktop-sd: 1170px;
+$tablet-hd: 1024px;
+$tablet-sd: 768px;
+$mobile: 480px;
+
+@mixin _1170 {
+    @media screen and (max-width: $desktop-sd) {
+        @content;
+    }
+}
+
+@mixin _1024 {
+    @media screen and (max-width: $tablet-hd) {
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media screen and (max-width: $tablet-sd) {
+        @content;
+    }
+}
+
+@mixin _480 {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin _section-1 {
+    &__title {
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        color: #555555;
+
+        @include _480 {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+    }
+
+    &__price {
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        color: #7AC751;
+        margin: 10px 0;
+
+        @include _480 {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    &__link {
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        color: #757575;
+        text-decoration: none;
+
+        @include _480 {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+    }
+
+}
+
+@mixin _section-2 {
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 390px;
+
+        &__item-1 {
+            font-family: $main-font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: 0.008em;
+            text-transform: uppercase;
+            color: rgba(117, 117, 117, 0.71);
+        }
+
+        &__item-2 {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.005em;
+            color: #555555;
+            margin: 4px 0 13px 0;
+        }
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+
+        &__item-1 {
+            font-family: $main-font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.005em;
+            color: #7AC751;
+            margin-right: 10px;
+        }
+
+        &__item-2 {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.005em;
+            text-decoration-line: line-through;
+            color: #CCCCCC;
+        }
+    }
+
+
+}
+
+@mixin _section-3 {
+
+    &__text {
+        width: 42%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        @include _1024{
+            width: 35%;
+            padding-left: 50px;
+        }
+
+        @include _768{
+            width: 50%;
+            padding: 20px;
+            
+        }
+        
+        @include _480{
+            width: 100%;
+            padding-top: 340px;
+        }
+
+
+        &__title {
+            font-family: $main-font-family;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 28px;
+            color: #555555;
+            
+        }
+
+        &__disc {
+            font-family: $main-font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #757575;
+
+            @include _1024{
+                font-size: 16px;
+                line-height: 20px;
+
+            }
+        }
+
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+          
+
+            &__price {
+                font-family: $main-font-family;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                text-align: center;
+                letter-spacing: 0.005em;
+                color: #7AC751;
+            }
+
+            &__price__line {
+                font-family: $main-font-family;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 120%;
+                text-align: center;
+                letter-spacing: 0.005em;
+                text-decoration: line-through;
+                color: #CCCCCC;
+
+            }
+
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #7AC751;
+                width: 91px;
+                height: 26px;
+
+
+                &__shop-now {
+                    font-family: $main-font-family;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    max-width: 1170px;
+    margin: 50px auto;
+}
+
+.section-1 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 250px 250px;
+    gap: 18px;
+    grid-template-areas:
+        " modern book"
+        " modern sofa";
+
+    @include _1024 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 300px);
+        gap: 18px;
+        grid-template-areas:
+            "modern"
+            "book"
+            "sofa";
+    }
+}
+
+.modern {
+    grid-area: modern;
+    padding: 50px 30px;
+    width: 100%;
+    background-image: url(./images/Mask\ Group.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include _section-1()
+}
+
+.book {
+    grid-area: book;
+    width: 100%;
+    padding: 50px 30px;
+    background-image: url(./images/Rectangle\ 33.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include _section-1()
+}
+
+.sofa {
+    grid-area: sofa;
+    padding: 50px 30px;
+    width: 100%;
+    background-image: url(./images/Rectangle\ 34.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include _section-1()
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 120px auto;
+
+    @include _768 {
+        margin: 60px auto;
+
+    }
+
+    &__h2 {
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 45px;
+        color: #555555;
+        margin-bottom: 45px;
+
+        @include _768 {
+            font-size: 26px;
+            line-height: 35px;            
+        }
+
+        @include _480 {
+            margin-bottom: 10px;
+           
+        }
+
+        &__links {
+            display: flex;
+            justify-content: space-around;
+            margin: 70px 35px;
+
+            @include _480 {
+                flex-direction: column;
+                margin: 20px;
+                }
+
+
+            &__item {
+                font-family: $main-font-family;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: #757575;
+                text-align: center;
+                text-decoration: none;
+
+                @include _768 {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+
+                @include _480 {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
+
+            }
+
+            &__item:hover {
+                color: #7AC751;
+            }
+
+        }
+
+    }
+}
+
+.section-2 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: minmax(390px, auto);
+    gap: 30px;
+    width: 100%;
+    
+    &__item-1 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/1.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-2 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/2.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-3 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/3.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-4 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/4.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-5 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/5.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-6 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/6.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-7 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/7.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+    &__item-8 {
+        position: relative;
+        width: 100%;
+        background-image: url(./images/8.png);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @include _section-2()
+    }
+
+}
+
+.section__3 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "item-1 item-2";
+
+    @include _1024{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        grid-template-areas: 
+        "item-1"
+        "item-2";
+    }
+
+    @include _480{
+        grid-template-columns: 1fr;
+        grid-template-rows: 420px 420px;
+        gap: 30px;
+        grid-template-areas: 
+        "item-1"
+        "item-2";
+    }
+
+
+    &__item-1 {
+        width: 100%;
+        height: 250px;
+        grid-area: item-1;
+        position: relative;
+        background-image: url(./images/Offer-1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include _section-3()
+    }
+
+
+    &__item-2 {
+        width: 100%;
+        height: 250px;
+        grid-area: item-2;
+        position: relative;
+        background-image: url(./images/sec-3.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include _section-3()
+    }
+
+}
+
+
+.discount {
+    width: 64px;
+    height: 23px;
+    background: #00B7F1;
+    border-radius: 0px 0px 0px 5px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+}
+
+.discount__new {
+    width: 44px;
+    height: 20px;
+    background-color: #00B7F1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0px 0px 5px 0px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.discount__sale {
+    width: 44px;
+    height: 20px;
+    background-color: #7AC751;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0px 0px 5px 0px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
