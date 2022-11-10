@@ -104,6 +104,10 @@ $mobile: 480px;
         color: #757575;
         text-decoration: none;
 
+        &__arrow{
+            padding: 5px;
+        }
+
         @include _480 {
             font-size: 12px;
             line-height: 15px;
@@ -170,6 +174,18 @@ $mobile: 480px;
             text-decoration-line: line-through;
             color: #CCCCCC;
         }
+
+        &__star{
+            display: flex;
+
+
+            &__item{
+                margin-right: 3px;
+
+            }
+   
+        }
+    
     }
 
 
@@ -276,11 +292,48 @@ $mobile: 480px;
                     align-items: center;
                     text-decoration: none;
                     color: #FFFFFF;
+
+                }
+            }
+        }
+
+        &__time {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+    
+            &__circle {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 120%;
+                text-align: center;
+                color: #FFFFFF;
+                width: 40px;
+                height: 40px;
+                background-color: #7AC751;
+                border-radius: 100px;
+                padding: 8px;
+    
+                &__text {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 6px;
+                    line-height: 120%;
+                    text-align: center;
+                    letter-spacing: 0.005em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
                 }
             }
         }
     }
 }
+
+
+
 
 * {
     margin: 0;
@@ -428,6 +481,8 @@ $mobile: 480px;
     grid-template-rows: minmax(390px, auto);
     gap: 30px;
     width: 100%;
+    cursor: pointer;
+    
     
     &__item-1 {
         position: relative;
@@ -435,9 +490,10 @@ $mobile: 480px;
         background-image: url(./images/1.png);
         background-position: top;
         background-repeat: no-repeat;
-
+ 
         @include _section-2()
     }
+
 
     &__item-2 {
         position: relative;
@@ -459,6 +515,7 @@ $mobile: 480px;
         @include _section-2()
     }
 
+    
     &__item-4 {
         position: relative;
         width: 100%;
@@ -508,8 +565,46 @@ $mobile: 480px;
 
         @include _section-2()
     }
+}  
 
-}
+
+    .section-2__item-2 :hover .hover{
+       display: block ;
+
+    }
+
+    .hover{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 40px;
+        height: 180px;
+        position: absolute;
+        right: 5px;
+        bottom: 105px;
+        display: none;
+        
+
+        &__svg{
+            background-color:#FFFFFF;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            text-align: center;
+            padding: 8px;
+            margin-bottom: 6px;
+
+        }
+        
+    }
+
+        .hover__trans{
+           padding: 5px;
+        }
+    
+
+
+
 
 .section__3 {
     display: grid;
@@ -632,3 +727,6 @@ $mobile: 480px;
     align-items: center;
     justify-content: center;
 }
+
+
+
