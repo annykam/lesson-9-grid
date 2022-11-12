@@ -118,12 +118,19 @@ $mobile: 480px;
 }
 
 @mixin _section-2 {
+    &__cover {
+        width: 100%;
+    
+        &__img {
+            width: 100%;
+        }
+    }
+
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: end;
-        height: 390px;
-
+        
         &__item-1 {
             font-family: $main-font-family;
             font-style: normal;
@@ -214,7 +221,7 @@ $mobile: 480px;
         
         @include _480{
             width: 100%;
-            padding-top: 340px;
+            padding-top: 374px;
         }
 
 
@@ -225,6 +232,10 @@ $mobile: 480px;
             font-size: 22px;
             line-height: 28px;
             color: #555555;
+
+            @include _768{
+                margin-bottom: 15px;
+            }
             
         }
 
@@ -241,6 +252,10 @@ $mobile: 480px;
                 line-height: 20px;
 
             }
+
+            @include _768{
+                margin-bottom: 15px;
+            }
         }
 
         &__items {
@@ -248,7 +263,9 @@ $mobile: 480px;
             justify-content: space-between;
             align-items: center;
 
-          
+            @include _768 {
+                margin-bottom: 15px;
+            }
 
             &__price {
                 font-family: $main-font-family;
@@ -344,6 +361,7 @@ $mobile: 480px;
 .body {
     max-width: 1170px;
     margin: 50px auto;
+    padding: 20px;
 }
 
 .section-1 {
@@ -487,10 +505,7 @@ $mobile: 480px;
     &__item-1 {
         position: relative;
         width: 100%;
-        background-image: url(./images/1.png);
-        background-position: top;
-        background-repeat: no-repeat;
- 
+        
         @include _section-2()
     }
 
@@ -498,9 +513,6 @@ $mobile: 480px;
     &__item-2 {
         position: relative;
         width: 100%;
-        background-image: url(./images/2.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -508,9 +520,6 @@ $mobile: 480px;
     &__item-3 {
         position: relative;
         width: 100%;
-        background-image: url(./images/3.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -519,9 +528,6 @@ $mobile: 480px;
     &__item-4 {
         position: relative;
         width: 100%;
-        background-image: url(./images/4.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -529,9 +535,6 @@ $mobile: 480px;
     &__item-5 {
         position: relative;
         width: 100%;
-        background-image: url(./images/5.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -539,9 +542,6 @@ $mobile: 480px;
     &__item-6 {
         position: relative;
         width: 100%;
-        background-image: url(./images/6.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -549,9 +549,6 @@ $mobile: 480px;
     &__item-7 {
         position: relative;
         width: 100%;
-        background-image: url(./images/7.png);
-        background-position: top;
-        background-repeat: no-repeat;
 
         @include _section-2()
     }
@@ -559,52 +556,43 @@ $mobile: 480px;
     &__item-8 {
         position: relative;
         width: 100%;
-        background-image: url(./images/8.png);
-        background-position: top;
-        background-repeat: no-repeat;
-
+        
         @include _section-2()
     }
 }  
 
 
-    .section-2__item-2 :hover .hover{
-       display: block ;
+.section-2__item-2 :hover .hover{
+    display: block ;
 
-    }
+}
 
-    .hover{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+.hover{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40px;
+    height: 180px;
+    position: absolute;
+    right: 5px;
+    bottom: 105px;
+    display: none;
+        
+
+    &__svg{
+        background-color:#FFFFFF;
         width: 40px;
-        height: 180px;
-        position: absolute;
-        right: 5px;
-        bottom: 105px;
-        display: none;
-        
+        height: 40px;
+        border-radius: 100px;
+        text-align: center;
+        padding: 8px;
+        margin-bottom: 6px;
+    }       
+}
 
-        &__svg{
-            background-color:#FFFFFF;
-            width: 40px;
-            height: 40px;
-            border-radius: 100px;
-            text-align: center;
-            padding: 8px;
-            margin-bottom: 6px;
-
-        }
-        
-    }
-
-        .hover__trans{
-           padding: 5px;
-        }
-    
-
-
-
+.hover__trans{
+    padding: 5px;
+}
 
 .section__3 {
     display: grid;
@@ -626,7 +614,7 @@ $mobile: 480px;
 
     @include _480{
         grid-template-columns: 1fr;
-        grid-template-rows: 420px 420px;
+        grid-template-rows: 500px 420px;;
         gap: 30px;
         grid-template-areas: 
         "item-1"

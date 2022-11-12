@@ -31,6 +31,7 @@
 .body {
   max-width: 1170px;
   margin: 50px auto;
+  padding: 20px;
 }
 
 .section-1 {
@@ -318,15 +319,17 @@
 .section-2__item-1 {
   position: relative;
   width: 100%;
-  background-image: url(./images/1.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-1__cover {
+  width: 100%;
+}
+.section-2__item-1__cover__img {
+  width: 100%;
 }
 .section-2__item-1__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-1__text__item-1 {
   font-family: "Mulish";
@@ -384,15 +387,17 @@
 .section-2__item-2 {
   position: relative;
   width: 100%;
-  background-image: url(./images/2.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-2__cover {
+  width: 100%;
+}
+.section-2__item-2__cover__img {
+  width: 100%;
 }
 .section-2__item-2__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-2__text__item-1 {
   font-family: "Mulish";
@@ -450,15 +455,17 @@
 .section-2__item-3 {
   position: relative;
   width: 100%;
-  background-image: url(./images/3.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-3__cover {
+  width: 100%;
+}
+.section-2__item-3__cover__img {
+  width: 100%;
 }
 .section-2__item-3__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-3__text__item-1 {
   font-family: "Mulish";
@@ -516,15 +523,17 @@
 .section-2__item-4 {
   position: relative;
   width: 100%;
-  background-image: url(./images/4.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-4__cover {
+  width: 100%;
+}
+.section-2__item-4__cover__img {
+  width: 100%;
 }
 .section-2__item-4__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-4__text__item-1 {
   font-family: "Mulish";
@@ -582,15 +591,17 @@
 .section-2__item-5 {
   position: relative;
   width: 100%;
-  background-image: url(./images/5.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-5__cover {
+  width: 100%;
+}
+.section-2__item-5__cover__img {
+  width: 100%;
 }
 .section-2__item-5__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-5__text__item-1 {
   font-family: "Mulish";
@@ -648,15 +659,17 @@
 .section-2__item-6 {
   position: relative;
   width: 100%;
-  background-image: url(./images/6.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-6__cover {
+  width: 100%;
+}
+.section-2__item-6__cover__img {
+  width: 100%;
 }
 .section-2__item-6__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-6__text__item-1 {
   font-family: "Mulish";
@@ -714,15 +727,17 @@
 .section-2__item-7 {
   position: relative;
   width: 100%;
-  background-image: url(./images/7.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-7__cover {
+  width: 100%;
+}
+.section-2__item-7__cover__img {
+  width: 100%;
 }
 .section-2__item-7__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-7__text__item-1 {
   font-family: "Mulish";
@@ -780,15 +795,17 @@
 .section-2__item-8 {
   position: relative;
   width: 100%;
-  background-image: url(./images/8.png);
-  background-position: top;
-  background-repeat: no-repeat;
+}
+.section-2__item-8__cover {
+  width: 100%;
+}
+.section-2__item-8__cover__img {
+  width: 100%;
 }
 .section-2__item-8__text {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 390px;
 }
 .section-2__item-8__text__item-1 {
   font-family: "Mulish";
@@ -868,7 +885,8 @@
   padding: 8px;
   margin-bottom: 6px;
 }
-.hover .hover__trans {
+
+.hover__trans {
   padding: 5px;
 }
 
@@ -891,7 +909,7 @@
 @media screen and (max-width: 480px) {
   .section__3 {
     grid-template-columns: 1fr;
-    grid-template-rows: 420px 420px;
+    grid-template-rows: 500px 420px;
     gap: 30px;
     grid-template-areas: "item-1" "item-2";
   }
@@ -929,7 +947,7 @@
 @media screen and (max-width: 480px) {
   .section__3__item-1__text {
     width: 100%;
-    padding-top: 340px;
+    padding-top: 374px;
   }
 }
 .section__3__item-1__text__title {
@@ -939,6 +957,11 @@
   font-size: 22px;
   line-height: 28px;
   color: #555555;
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-1__text__title {
+    margin-bottom: 15px;
+  }
 }
 .section__3__item-1__text__disc {
   font-family: "Mulish";
@@ -954,10 +977,20 @@
     line-height: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .section__3__item-1__text__disc {
+    margin-bottom: 15px;
+  }
+}
 .section__3__item-1__text__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-1__text__items {
+    margin-bottom: 15px;
+  }
 }
 .section__3__item-1__text__items__price {
   font-family: "Mulish";
@@ -1061,7 +1094,7 @@
 @media screen and (max-width: 480px) {
   .section__3__item-2__text {
     width: 100%;
-    padding-top: 340px;
+    padding-top: 374px;
   }
 }
 .section__3__item-2__text__title {
@@ -1071,6 +1104,11 @@
   font-size: 22px;
   line-height: 28px;
   color: #555555;
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-2__text__title {
+    margin-bottom: 15px;
+  }
 }
 .section__3__item-2__text__disc {
   font-family: "Mulish";
@@ -1086,10 +1124,20 @@
     line-height: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .section__3__item-2__text__disc {
+    margin-bottom: 15px;
+  }
+}
 .section__3__item-2__text__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .section__3__item-2__text__items {
+    margin-bottom: 15px;
+  }
 }
 .section__3__item-2__text__items__price {
   font-family: "Mulish";
